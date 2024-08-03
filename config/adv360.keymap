@@ -29,6 +29,42 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        left_bracket_morph: left_bracket_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LEFT_BRACKET_MORPH";
+            bindings = <&kp LEFT_BRACE>, <&kp LEFT_BRACKET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        right_bracket_morph: right_bracket_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RIGHT_BRACKET_MORPH";
+            bindings = <&kp RBRC>, <&kp RBKT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        quote_morph: quote_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "QUOTE_MORPH";
+            bindings = <&kp DQT>, <&kp APOS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        underscore_mod_morph: underscore_mod_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "UNDERSCORE_MOD_MORPH";
+            bindings = <&kp UNDER>, <&kp MINUS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -46,11 +82,11 @@
 
         symb {
             bindings = <
-&kp EQUAL  &kp EXCL   &kp AT    &kp HASH  &kp DLLR   &kp PRCNT  &tog 2                                                         &mo 4      &kp CARET  &kp AMPS  &kp ASTRK         &kp LPAR           &kp RPAR       &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp F     &kp P      &kp G      &to 0                                                          &none      &kp J      &kp L     &kp U             &kp Y              &kp SEMICOLON  &kp BSLH
-&kp ESC    &kp A      &kp R     &kp S     &kp T      &kp D      &none     &kp LCTRL  &kp LALT            &kp LGUI   &kp RCTRL  &none      &kp H      &kp N     &kp E             &kp I              &kp O          &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                           &kp UP_ARROW        &kp PG_UP                        &kp K      &kp M     &kp COMMA         &kp DOT            &kp FSLH       &kp RSHFT
-&mo 3      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT             &kp BSPC  &kp DEL    &kp DOWN_ARROW      &kp PG_DN  &kp ENTER  &kp SPACE             &kp HOME  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp END        &mo 3
+&kp EQUAL  &kp EXCL   &kp AT    &kp HASH  &kp DLLR   &kp PRCNT  &tog 2                                                         &mo 4      &kp CARET  &kp AMPS  &kp ASTRK            &kp LPAR              &kp RPAR       &underscore_mod_morph
+&kp TAB    &kp Q      &kp W     &kp F     &kp P      &kp G      &to 0                                                          &none      &kp J      &kp L     &kp U                &kp Y                 &kp SEMICOLON  &kp BSLH
+&kp ESC    &kp A      &kp R     &kp S     &kp T      &kp D      &none     &kp LCTRL  &kp LALT            &kp LGUI   &kp RCTRL  &none      &kp H      &kp N     &kp E                &kp I                 &kp O          &quote_morph
+&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                           &kp UP_ARROW        &kp PG_UP                        &kp K      &kp M     &kp COMMA            &kp DOT               &kp FSLH       &kp RSHFT
+&mo 3      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT             &kp BSPC  &kp DEL    &kp DOWN_ARROW      &kp PG_DN  &kp ENTER  &kp SPACE             &kp HOME  &left_bracket_morph  &right_bracket_morph  &kp END        &mo 3
             >;
         };
 
