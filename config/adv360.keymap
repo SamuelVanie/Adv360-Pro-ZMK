@@ -93,7 +93,7 @@
             bindings = <
 &kp EQUAL  &kp EXCL   &kp AT    &kp HASH  &kp DLLR   &kp PRCNT  &tog 2                                                         &mo 4      &kp CARET  &kp AMPS  &kp ASTRK            &kp LPAR              &kp RPAR       &underscore_mod_morph
 &kp TAB    &kp Q      &kp W     &kp F     &kp P      &kp G      &to 0                                                          &none      &kp J      &kp L     &kp U                &kp Y                 &kp SEMICOLON  &kp BSLH
-&kp ESC    &kp A      &kp R     &kp S     &kp T      &kp D      &none     &kp LCTRL  &kp LALT            &kp LGUI   &kp RCTRL  &none      &kp H      &kp N     &kp E                &kp I                 &kp O          &quote_morph
+&kp ESC    &kp A      &kp R     &kp S     &kp T      &kp D      &none     &kp LCTRL  &kp LALT            &kp LGUI   &kp RCTRL  &none      &kp H      &kp N     &kp E                &kp I                 &kp O          &kp SINGLE_QUOTE
 &kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                           &kp UP_ARROW        &kp PG_UP                        &kp K      &kp M     &kp COMMA            &kp DOT               &kp FSLH       &kp RSHFT
 &mo 3      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT             &kp BSPC  &kp DEL    &kp DOWN_ARROW      &kp PG_DN  &kp ENTER  &kp SPACE             &kp RALT  &left_bracket_morph  &right_bracket_morph  &kp END        &mo 3
             >;
