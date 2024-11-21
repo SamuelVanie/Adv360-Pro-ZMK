@@ -36,7 +36,8 @@
             bindings = <&kp LEFT_BRACE>, <&kp LEFT_BRACKET>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT|MOD_LALT|MOD_LCTL|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
         };
 
         right_bracket_morph: right_bracket_morph {
@@ -45,7 +46,8 @@
             bindings = <&kp RBRC>, <&kp RBKT>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
         };
 
         quote_morph: quote_morph {
@@ -63,7 +65,8 @@
             bindings = <&kp UNDER>, <&kp MINUS>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
         };
 
         backslash_mod_morph: backslash_mod_morph {
