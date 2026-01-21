@@ -20,6 +20,24 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        lbrace: lbrace {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LBRACE";
+            bindings = <&kp LEFT_BRACE>, <&kp LEFT_BRACKET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        rbrace: rbrace {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RBRACE";
+            bindings = <&kp RIGHT_BRACE>, <&kp RIGHT_BRACKET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -28,22 +46,22 @@
         symb {
             display-name = "Base";
             bindings = <
-&kp EQUAL  &kp EXCL   &kp AT           &kp POUND  &kp DLLR   &kp PRCNT  &tog 2                                                  &mo 4      &kp CARET  &kp AMPS  &kp ASTRK     &kp LPAR      &kp RPAR  &kp MINUS
-&kp TAB    &kp Q      &kp W            &kp F      &kp P      &kp G      &tog 1                                                  &none      &kp J      &kp L     &kp U         &kp Y         &kp SEMI  &kp BSLH
-&kp ESC    &kp A      &kp R            &kp S      &kp T      &kp D      &none     &kp LCTRL  &kp LCMD      &kp RGUI  &kp RCTRL  &none      &kp H      &kp N     &kp E         &kp I         &kp O     &kp APOS
-&kp LSHFT  &kp Z      &kp X            &kp C      &kp V      &kp B                           &kp CAPS      &kp LALT                        &kp K      &kp M     &kp COMMA     &kp DOT       &kp FSLH  &kp RSHFT
-&mo 3      &kp GRAVE  &kp PRINTSCREEN  &kp LEFT   &kp RIGHT             &kp BSPC  &kp DEL    &kp UP        &kp DOWN  &kp ENTER  &kp SPACE             &kp RALT  &kp LS(LBRC)  &kp LS(RBRC)  &kp END   &mo 3
+&kp EQUAL  &kp EXCL   &kp AT           &kp POUND  &kp DLLR   &kp PRCNT  &tog 2                                                  &mo 4      &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &kp MINUS
+&kp TAB    &kp Q      &kp W            &kp F      &kp P      &kp G      &tog 1                                                  &none      &kp J      &kp L     &kp U      &kp Y     &kp SEMI  &kp BSLH
+&kp ESC    &kp A      &kp R            &kp S      &kp T      &kp D      &none     &kp LCTRL  &kp LCMD      &kp RGUI  &kp RCTRL  &none      &kp H      &kp N     &kp E      &kp I     &kp O     &kp APOS
+&kp LSHFT  &kp Z      &kp X            &kp C      &kp V      &kp B                           &kp CAPS      &kp LALT                        &kp K      &kp M     &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
+&mo 3      &kp GRAVE  &kp PRINTSCREEN  &kp LEFT   &kp RIGHT             &kp BSPC  &kp DEL    &kp UP        &kp DOWN  &kp ENTER  &kp SPACE             &kp RALT  &lbrace    &rbrace   &kp END   &mo 3
             >;
         };
 
         default_layer {
             display-name = "Base";
             bindings = <
-&kp EQUAL  &kp N1     &kp N2           &kp N3    &kp N4     &kp N5  &tog 2                                                  &mo 4      &kp N6  &kp N7    &kp N8        &kp N9        &kp N0    &kp MINUS
-&kp TAB    &kp Q      &kp W            &kp F     &kp P      &kp G   &tog 0                                                  &none      &kp J   &kp L     &kp U         &kp Y         &kp SEMI  &kp BSLH
-&kp ESC    &kp A      &kp R            &kp S     &kp T      &kp D   &none     &kp LCTRL  &kp LCMD      &kp RGUI  &kp RCTRL  &none      &kp H   &kp N     &kp E         &kp I         &kp O     &kp APOS
-&kp LSHFT  &kp Z      &kp X            &kp C     &kp V      &kp B                        &kp CAPS      &kp LALT                        &kp K   &kp M     &kp COMMA     &kp DOT       &kp FSLH  &kp RSHFT
-&mo 3      &kp GRAVE  &kp PRINTSCREEN  &kp LEFT  &kp RIGHT          &kp BSPC  &kp DEL    &kp UP        &kp DOWN  &kp ENTER  &kp SPACE          &kp RALT  &kp LS(LBRC)  &kp LS(RBRC)  &kp END   &mo 3
+&kp EQUAL  &kp N1     &kp N2           &kp N3    &kp N4     &kp N5  &tog 2                                                  &mo 4      &kp N6  &kp N7    &kp N8     &kp N9   &kp N0    &kp MINUS
+&kp TAB    &kp Q      &kp W            &kp F     &kp P      &kp G   &tog 0                                                  &none      &kp J   &kp L     &kp U      &kp Y    &kp SEMI  &kp BSLH
+&kp ESC    &kp A      &kp R            &kp S     &kp T      &kp D   &none     &kp LCTRL  &kp LCMD      &kp RGUI  &kp RCTRL  &none      &kp H   &kp N     &kp E      &kp I    &kp O     &kp APOS
+&kp LSHFT  &kp Z      &kp X            &kp C     &kp V      &kp B                        &kp CAPS      &kp LALT                        &kp K   &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+&mo 3      &kp GRAVE  &kp PRINTSCREEN  &kp LEFT  &kp RIGHT          &kp BSPC  &kp DEL    &kp UP        &kp DOWN  &kp ENTER  &kp SPACE          &kp RALT  &lbrace    &rbrace  &kp END   &mo 3
             >;
         };
 
@@ -61,11 +79,11 @@
         fn {
             display-name = "Fn";
             bindings = <
-&kp F1  &kp F2     &kp F3    &kp F4     &kp F5    &kp F6  &tog 2                                           &mo 4   &kp F7        &kp F8           &kp F9           &kp F10          &kp F11  &kp F12
-&trans  &trans     &kp EXCL  &kp LPAR   &kp RPAR  &trans  &none                                            &none   &trans        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans   &trans
-&trans  &kp MINUS  &kp PLUS  &kp EQUAL  &kp GT    &trans  &none   &trans  &trans      &trans    &kp DOT    &none   &kp C_VOL_UP  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans   &trans
-&trans  &trans     &trans    &trans     &trans    &trans                  &trans      &trans                       &kp C_VOL_DN  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans   &trans
-&trans  &trans     &trans    &trans     &trans            &trans  &trans  &trans      &kp BSLH  &kp UNDER  &trans                &kp HOME         &kp KP_NUMBER_0  &kp END          &trans   &trans
+&kp F1  &kp F2     &kp F3    &kp F4     &kp F5    &kp F6  &tog 2                                           &mo 4   &kp F7        &kp F8    &kp F9  &kp F10  &kp F11  &kp F12
+&trans  &trans     &kp EXCL  &kp LPAR   &kp RPAR  &trans  &none                                            &none   &trans        &kp N7    &kp N8  &kp N9   &trans   &trans
+&trans  &kp MINUS  &kp PLUS  &kp EQUAL  &kp GT    &trans  &none   &trans  &trans      &trans    &kp DOT    &none   &kp C_VOL_UP  &kp N4    &kp N5  &kp N6   &trans   &trans
+&trans  &trans     &trans    &trans     &trans    &trans                  &trans      &trans                       &kp C_VOL_DN  &kp N1    &kp N2  &kp N3   &trans   &trans
+&trans  &trans     &trans    &trans     &trans            &trans  &trans  &trans      &kp BSLH  &kp UNDER  &trans                &kp HOME  &kp N0  &kp END  &trans   &trans
             >;
         };
 
